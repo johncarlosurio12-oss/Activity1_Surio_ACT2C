@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+
+:root {
+    color-scheme: light;
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    color: #17231d;
+    background: #f3f6f1;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 32px 20px;
+    background:
+        radial-gradient(ellipse at 12% 10%, rgb(200 225 190 / 50%), transparent 36%),
+        radial-gradient(ellipse at 90% 90%, rgb(237 218 163 / 35%), transparent 34%),
+        #f6f7f3;
+}
+
+.auth-card {
+    width: min(100%, 460px);
+    padding: 42px;
+    border: 1px solid rgb(30 69 47 / 9%);
+    border-radius: 22px;
+    background: rgb(255 255 255 / 96%);
+    box-shadow: 0 24px 70px rgb(26 49 34 / 12%);
+}
+
+.auth-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    color: #1e5636;
+    font-family: "Manrope", "DM Sans", sans-serif;
+    font-size: 0.96rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.auth-brand img {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 auto;
+    border: 1px solid #e6e9df;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgb(26 49 34 / 10%);
+}
+
+h1 {
+    margin: 0;
+    color: #17231d;
+    font-family: "Manrope", "DM Sans", sans-serif;
+    font-size: clamp(1.7rem, 5vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    text-align: center;
+}
+
+.subtitle {
+    margin: 9px 0 28px;
+    color: #718078;
+    font-size: 0.96rem;
+    line-height: 1.55;
+    text-align: center;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-top: 5px;
+    color: #34443a;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 14px;
+    border: 1px solid #dce4dc;
+    border-radius: 10px;
+    background: #fbfcfa;
+    color: #17231d;
+    font: inherit;
+    transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+input::placeholder {
+    color: #9aa79d;
+}
+
+input:focus {
+    border-color: #3a8052;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgb(58 128 82 / 13%);
+}
+
+button {
+    min-height: 50px;
+    margin-top: 13px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #276b43, #1b5635);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    box-shadow: 0 7px 16px rgb(33 97 59 / 20%);
+    transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+    box-shadow: 0 10px 20px rgb(33 97 59 / 25%);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #9aca9e;
+    outline-offset: 3px;
+}
+
+.message {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+.message p {
+    margin: 0;
+}
+
+.message p + p {
+    margin-top: 6px;
+}
+
+.message.success {
+    border-color: #b6dfc4;
+    background: #effaf2;
+    color: #24633b;
+}
+
+.message.error {
+    border-color: #f1c4bd;
+    background: #fff4f1;
+    color: #9d382a;
+}
+
+.switch {
+    margin: 24px 0 0;
+    color: #758178;
+    font-size: 0.92rem;
+    text-align: center;
+}
+
+a {
+    color: #276b43;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #174b2d;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 18px 14px;
+    }
+
+    .auth-card {
+        padding: 32px 24px;
+        border-radius: 18px;
+    }
+
+    .auth-brand {
+        margin-bottom: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
